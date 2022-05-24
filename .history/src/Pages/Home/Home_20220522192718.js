@@ -4,7 +4,7 @@ import Contact from './Contact';
 import Footer from '../Shared/Footer';
 import Info from './Info';
 import MakeAppointment from './MakeAppointment';
-import Services from './Services';
+import Products from './Products';
 import Testimonials from './Testimonials';
 
 const Home = () => {
@@ -12,7 +12,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Info></Info>
-            <Services></Services>
+            <Products></Products>
             <MakeAppointment></MakeAppointment>
             <Testimonials></Testimonials>
             <Contact></Contact>
