@@ -33,6 +33,8 @@ const AddReview = () => {
           <br/>
           <input className='w-full p-2 my-2 rounded'{...register('image' )} Placeholder="Image" required/>
           <br/>
+          <input className='w-full p-2 my-2 rounded'{...register('delivery')} Placeholder="Delivery" required/>
+          <br/>
           <input className='w-full p-5 my-2 rounded'{...register('description' )} Placeholder="Description" required/>
           <br/>
           <input className='bg-primary my-3 px-5 py-3 rounded' type="submit" />

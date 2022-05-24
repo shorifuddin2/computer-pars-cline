@@ -29,9 +29,13 @@ const AddReview = () => {
           <form onSubmit={handleSubmit(onSubmit)}>
           <input className='w-full p-2 my-2 rounded' {...register('name')}Placeholder="name" required/>
           <br/>
+          <input className='w-full p-2 my-2 rounded'{...register('sold')} Placeholder="Sold" required/>
+          <br/>
           <input className='w-full p-2 my-2 rounded'{...register('quantity')} Placeholder="Quantity" required/>
           <br/>
           <input className='w-full p-2 my-2 rounded'{...register('image' )} Placeholder="Image" required/>
+          <br/>
+          <input className='w-full p-2 my-2 rounded'{...register('delivery')} Placeholder="Delivery" required/>
           <br/>
           <input className='w-full p-5 my-2 rounded'{...register('description' )} Placeholder="Description" required/>
           <br/>
