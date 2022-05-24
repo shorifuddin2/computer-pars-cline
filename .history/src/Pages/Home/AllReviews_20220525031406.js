@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import Review from '../Home/Review';
+import Review from './Review';
 const AllReview = () => {
 
     const[review,setReview] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/review')
+        fetch('http://localhost:5000/revi')
         .then(res=>res.json())
-        .then(data=> setReview(data));
+        .then(data=> setProduct(data));
     },[]);
 
     // const reviews = [
@@ -35,15 +35,18 @@ const AllReview = () => {
     return (
         <div className='my-28'>
         <div className='text-center'>
-            <h3 className='text-primary  text-xl font-bold uppercase'>Cline Reviews</h3>
+            <h3 className='text-primary  text-xl font-bold uppercase'>Our Product</h3>
            
         </div>
         <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
             {
-                review.map(review =><Review
-                    key={review._id}
-                    product={review}
-                ></Review>) 
+                
+                product.map(product =><Product
+                    key={product._id}
+                    product={product}
+                ></Product>)
+
+                 
             }
             
         </div>

@@ -36,7 +36,7 @@ const AddReview = () => {
           <br/>
           <input className='w-full p-5 my-2 rounded'{...register('location' )} Placeholder="location" required/>
           <br/>
-          <input className='btn btn-primary my-3 px-5 py-3 rounded' type="submit" />
+          <input className='btn tn-primary my-3 px-5 py-3 rounded' type="submit" />
         </form>
         </div>
       );

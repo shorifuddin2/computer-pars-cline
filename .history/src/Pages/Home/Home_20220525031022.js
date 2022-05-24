@@ -5,7 +5,7 @@ import Footer from '../Shared/Footer';
 import Info from './Info';
 import MakeAppointment from './ComputerParts';
 import Products from './Products';
-import AllReviews from './AllReviews';
+import from './AllReviews';
 import ComputerParts from './ComputerParts';
 
 const Home = () => {
@@ -15,7 +15,7 @@ const Home = () => {
             <Info></Info>
             <Products></Products>
             <ComputerParts></ComputerParts>
-            <AllReviews></AllReviews>
+            <Testimonials></Testimonials>
             <Contact></Contact>
         </div>
     );

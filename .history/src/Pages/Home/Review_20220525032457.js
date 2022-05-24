@@ -12,9 +12,9 @@ const Review = ({ review }) => {
                         </div>
                     </div>
                     <div>
-                        <h4 className='text-xl'>{review?.name}</h4>
-                        <h4 className='text-xl'>{review?.review}</h4>
-                        <p>{review?.location}</p>
+                        <h4 className='text-xl'>{review.name}</h4>
+                        <h4 className='text-xl'>{review.review}</h4>
+                        <p>{review.location}</p>
                     </div>
                 </div>
             </div>

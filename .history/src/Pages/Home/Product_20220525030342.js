@@ -1,5 +1,5 @@
 import React from 'react';
-import { navigate, useNavigate } from 'react-router-dom';
+import { mavigate, useNavigate } from 'react-router-dom';
 import PrimaryButton from '../Shared/PrimaryButton';
 
 const Product = ({product}) => {

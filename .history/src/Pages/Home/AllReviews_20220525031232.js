@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import Review from '../Home/Review';
+import Review from './Review';
 const AllReview = () => {
 
-    const[review,setReview] = useState([]);
+    const[product,setProduct] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/review')
+        fetch('http://localhost:5000/product')
         .then(res=>res.json())
-        .then(data=> setReview(data));
+        .then(data=> setProduct(data));
     },[]);
-
     // const reviews = [
     //     {
     //         _id:1,
@@ -33,21 +32,22 @@ const AllReview = () => {
     //     },
     // ];
     return (
-        <div className='my-28'>
-        <div className='text-center'>
-            <h3 className='text-primary  text-xl font-bold uppercase'>Cline Reviews</h3>
-           
-        </div>
-        <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
-            {
-                review.map(review =><Review
-                    key={review._id}
-                    product={review}
-                ></Review>) 
-            }
-            
-        </div>
-        </div>
+        <section className='my-28'>
+            <div className='flex justify-between'>
+                <div>
+                    <h4 className="text-3xl text-primary font-bold text-center">Cline Review</h4>
+                    
+                </div>
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+                {
+                    review.map(review =><Review
+                        key={review._id}
+                        review={review}
+                    ></Review>)
+                }
+            </div>
+        </section>
     );
 };
 

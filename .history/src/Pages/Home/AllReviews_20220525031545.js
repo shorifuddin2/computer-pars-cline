@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import Review from '../Home/Review';
+import Review from './Review';
 const AllReview = () => {
 
     const[review,setReview] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/review')
+        fetch('http://localhost:5000/reviews')
         .then(res=>res.json())
         .then(data=> setReview(data));
     },[]);
@@ -40,10 +40,13 @@ const AllReview = () => {
         </div>
         <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
             {
-                review.map(review =><Review
+                
+                review.map(review =><review
                     key={review._id}
                     product={review}
-                ></Review>) 
+                ></review>)
+
+                 
             }
             
         </div>

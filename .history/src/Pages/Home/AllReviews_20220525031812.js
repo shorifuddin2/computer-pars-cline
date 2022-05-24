@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import Review from '../Home/Review';
+import eview from '../Home/Review';
 const AllReview = () => {
 
     const[review,setReview] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/review')
+        fetch('http://localhost:5000/reviews')
         .then(res=>res.json())
         .then(data=> setReview(data));
     },[]);
