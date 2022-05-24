@@ -12,4 +12,4 @@ const Purchase = () => {
     );
 };
 
-export default urchase;
+export default Purchase;
