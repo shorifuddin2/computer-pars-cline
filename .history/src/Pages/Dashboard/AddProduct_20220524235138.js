@@ -28,15 +28,18 @@ const AddProduct = () => {
         <div className='w-50 bg-slate-400 mx-auto p-5 Larger shadow rounded-3 my-5'>
             <h2 className='text-center font-6xl'>This Add Product</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
+          <input className='w-full p-2 my-2 rounded' {...register('email')}Placeholder="email" required/>
           <br/>
           <input className='w-full p-2 my-2 rounded' {...register('name')}Placeholder="name" required/>
           <br/>
           <input className='w-full p-2 my-2 rounded' {...register('price')} Placeholder="price" required/>
-    
+        
           <br/>
           <input className='w-full p-2 my-2 rounded'{...register('quantity')} Placeholder="Quantity" required/>
           <br/>
           <input className='w-full p-2 my-2 rounded'{...register('image' )} Placeholder="Image" required/>
+          <br/>
+          <input className='w-full p-2 my-2 rounded'{...register('delivery')} Placeholder="Delivery" required/>
           <br/>
           <input className='w-full p-5 my-2 rounded'{...register('description' )} Placeholder="Description" required/>
           <br/>
