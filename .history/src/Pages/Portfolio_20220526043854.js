@@ -30,10 +30,10 @@ const Portfolio = () => {
                         <figure><img className='h-80 w-96' src={website} alt="website" /></figure>
                         <div class="card-body">
                             <h2 class="card-title">
-                                Best smartphone Store Shop 
+                                Best smartphone Store Po 
                                 <div class="badge badge-secondary">NEW</div>
                             </h2>
-                            <p>React Bootstrap, Node Js, Mongodb, Firebase, Es6, Express js,Heroku, .env etc My website building</p>
+                            <p>If a dog chews shoes whose shoes does he choose?</p>
                             <div class="card-actions justify-end">
                                 <div className='w-50'>
                                 <a href='https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-shorifuddin2' target='_blank' class="badge badge-outline">Cline Github</a>

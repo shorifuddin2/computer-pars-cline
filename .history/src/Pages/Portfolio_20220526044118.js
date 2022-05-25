@@ -33,7 +33,7 @@ const Portfolio = () => {
                                 Best smartphone Store Shop 
                                 <div class="badge badge-secondary">NEW</div>
                             </h2>
-                            <p>React Bootstrap, Node Js, Mongodb, Firebase, Es6, Express js,Heroku, .env etc My website building</p>
+                            <p>React Bootstrap, Node Js, Mongodb, Firebase, Es6, E</p>
                             <div class="card-actions justify-end">
                                 <div className='w-50'>
                                 <a href='https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-shorifuddin2' target='_blank' class="badge badge-outline">Cline Github</a>
