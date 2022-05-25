@@ -27,7 +27,7 @@ const Portfolio = () => {
                 <div className='grid grid-cols-3 gap-4 '>
 
                         <div class="card w-90  bg-base-100 shadow-xl ">
-                        <figure><img className='h-80 w-96' src={website} alt="website" /></figure>
+                        <figure><img className='h-40 w-' src={website} alt="website" /></figure>
                         <div class="card-body">
                             <h2 class="card-title">
                                 Shoes!

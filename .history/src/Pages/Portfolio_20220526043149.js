@@ -26,8 +26,8 @@ const Portfolio = () => {
             <h1 className='text-primary text-5xl font-bold text-center p-5'>This is My Best website</h1>
                 <div className='grid grid-cols-3 gap-4 '>
 
-                        <div class="card w-90  bg-base-100 shadow-xl ">
-                        <figure><img className='h-80 w-96' src={website} alt="website" /></figure>
+                        <div class="card w-90 bg-base-100 shadow-xl ">
+                        <figure><img className='h-' src={website} alt="website" /></figure>
                         <div class="card-body">
                             <h2 class="card-title">
                                 Shoes!

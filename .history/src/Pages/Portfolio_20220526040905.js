@@ -1,6 +1,5 @@
 import React from 'react';
 import image from '../assets/images/milon-3.png'
-import website from '../assets/images/phone-wb.png'
 
 const Portfolio = () => {
     return (
@@ -24,10 +23,10 @@ const Portfolio = () => {
 
             <div className=' card bg-orange-200 shadow-2xl p-5'>
             <h1 className='text-primary text-5xl font-bold text-center p-5'>This is My Best website</h1>
-                <div className='grid grid-cols-3 gap-4 '>
+                <div className='grid grid-cols-4 gap-8 '>
 
-                        <div class="card w-90  bg-base-100 shadow-xl ">
-                        <figure><img className='h-80 w-96' src={website} alt="website" /></figure>
+                        <div class="card w-96 bg-base-100 shadow-xl">
+                        <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
                         <div class="card-body">
                             <h2 class="card-title">
                                 Shoes!
@@ -36,15 +35,15 @@ const Portfolio = () => {
                             <p>If a dog chews shoes whose shoes does he choose?</p>
                             <div class="card-actions justify-end">
                                 <div className='w-50'>
-                                <a href='https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-shorifuddin2' target='_blank' class="badge badge-outline">Cline Github</a>
-                                <a href='https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-shorifuddin2' target='_blank' class="badge badge-outline">Server Github</a>
-                                <a href='https://smartphone-show-room-88deb.web.app/' target='_blank' class="badge badge-outline">Live website</a>
+                                <a href='' target='_blank' class="badge badge-outline">Cline Github</a>
+                                <a href='' target='_blank' class="badge badge-outline">Server Github</a>
+                                <a href='' target='_blank' class="badge badge-outline">Live website</a>
                                 </div>
                             </div>
                         </div>
                         </div>
 
-                        <div class="card w-90 bg-base-100 shadow-xl">
+                        <div class="card w-96 bg-base-100 shadow-xl">
                         <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
                         <div class="card-body">
                             <h2 class="card-title">
@@ -62,7 +61,7 @@ const Portfolio = () => {
                         </div>
                         </div>
 
-                        <div class="card w-90 bg-base-100 shadow-xl">
+                        <div class="card w-96 bg-base-100 shadow-xl">
                         <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
                         <div class="card-body">
                             <h2 class="card-title">
