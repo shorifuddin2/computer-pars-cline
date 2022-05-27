@@ -3,9 +3,9 @@ import React from 'react';
 const Blogs = () => {
     return (
         <div>
-            <div class="card w-5/6 mx-auto  bg-base-100 shadow-xl">
-                <div class="card-body">
-                    <h2 class="card-title">How will you improve the performance of a React Application?</h2>
+            <div className="card w-5/6 mx-auto  bg-base-100 shadow-xl">
+                <div className="card-body">
+                    <h2 className="card-title">How will you improve the performance of a React Application?</h2>
                     <p> In React your UI is rendered by updating something called as DOM Document Object Model
                         In basic layman terms DOM resembles like a tree like structure of objects and nodes
                         In React howeve HTML is not the root node of a DOM In Fact it is only one single node from the Javascripts prototype chain so that it gets the functions to calculate styles properties or manipulate the individual nodes
@@ -20,9 +20,9 @@ const Blogs = () => {
             </div>
             <br/>
 
-            <div class="card w-5/6 mx-auto gap-4 bg-base-100 shadow-xl">
-                <div class="card-body">
-                    <h2 class="card-title">What are the different ways to manage a state in a React application?</h2>
+            <div className="card w-5/6 mx-auto gap-4 bg-base-100 shadow-xl">
+                <div className="card-body">
+                    <h2 className="card-title">What are the different ways to manage a state in a React application?</h2>
                     <p>React components have a built-in state object. The state is encapsulated data where
                         you store assets that are persistent between component renderings.
                         The state is just a fancy term for a JavaScript data structure. If a user
@@ -36,10 +36,10 @@ const Blogs = () => {
             </div>
             <br/>
 
-            <div class="card w-5/6 mx-auto gap-4 bg-base-100 shadow-xl">
-                <div class="card-body">
-                    <h2 class="card-title">How does prototypical inheritance work?</h2>
-                    <p>JavaScript has only primitives types null undefined, and objects. A big world of objects. In JavaScript contrary to languages like Java or PHP theres no concept of class that serves as a template to create objects.
+            <div className="card w-5/6 mx-auto gap-4 bg-base-100 shadow-xl">
+                <div className="card-body">
+                    <h2 className="card-title">How does prototypical inheritance work?</h2>
+                    <p>JavaScript has only primitives types null undefined, and objects. A big world of objects. In JavaScript contrary to languages like Java or PHP theres no concept of className that serves as a template to create objects.
                         Let's also recall that an object is a composable structure having properties: key and value pairs. For example, the following object cat contains 2 properties
                         In JavaScript, an object can inherit properties of another object. The object from where the properties are inherited is named prototype.
                         Following the example, you can make pet a prototype of cat which will then inherit legs property.
@@ -50,9 +50,9 @@ const Blogs = () => {
             </div>
             <br/>
 
-            <div class="card w-5/6 mx-auto gap-4 bg-base-100 shadow-xl">
-                <div class="card-body">
-                    <h2 class="card-title">You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?</h2>
+            <div className="card w-5/6 mx-auto gap-4 bg-base-100 shadow-xl">
+                <div className="card-body">
+                    <h2 className="card-title">You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?</h2>
                     <p>Understanding how to write a product description requires putting yourself in the shoes of your audience. When you write a product description with a huge crowd of
                         buyers in mind, your descriptions become wishy-washy and you end up addressing no one at all.
                         The problem is our potential buyers are not as interested in mundane features and specs. They want to know whats
@@ -63,9 +63,9 @@ const Blogs = () => {
             </div>
             <br/>
 
-            <div class="card w-5/6 mx-auto gap-4 bg-base-100 shadow-xl">
-                <div class="card-body">
-                    <h2 class="card-title">What is a unit test? Why should write unit tests?</h2>
+            <div className="card w-5/6 mx-auto gap-4 bg-base-100 shadow-xl">
+                <div className="card-body">
+                    <h2 className="card-title">What is a unit test? Why should write unit tests?</h2>
                     <p>A unit test typically comprises of three stages: plan, cases and scripting and
                         the unit test itself. In the first step, the unit test is prepared and reviewed. The next step is
                         for the test cases and scripts to be made, then the code is tested.

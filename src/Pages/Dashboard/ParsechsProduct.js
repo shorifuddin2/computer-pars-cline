@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
-const ParsechsProduct = () => {
+const ParchesProduct = () => {
 
     const [product, setProduct] = useState([]);
     const [user] = useAuthState(auth);
@@ -18,8 +18,8 @@ const ParsechsProduct = () => {
     return (
         <div>
             <h2>Parches Product: {product.length}</h2>
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="overflow-x-auto">
+                <table className="table w-full">
                     <thead>
                         <tr>
                             
@@ -47,4 +47,4 @@ const ParsechsProduct = () => {
     );
 };
 
-export default ParsechsProduct;
+export default ParchesProduct;
