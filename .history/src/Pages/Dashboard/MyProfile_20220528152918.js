@@ -109,7 +109,7 @@ const EditProfile = () => {
                                     value: true,
                                     message: 'location is Required'
                                 }
-                            })} name='location' placeholder='Habiganj,Sylhet, Bangladesh' className="input input-bordered" />
+                            })} name='location' placeholder='Dhaka, Bangladesh' className="input input-bordered" />
                         </div>
 
                         <div className="form-control">

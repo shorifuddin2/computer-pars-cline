@@ -31,13 +31,13 @@ const Update = () => {
     const items = {
         email: user?.email,
         userName: user?.displayName,
-        price: product.price,
+        productId: product.productId,
         name: product.name,
-        stock: product.stock,
         phone: e.target.phone.value,
         address: e.target.address.value,
         orderQuantity: e.target.orderQuantity.value
     }
+
     fetch('http://localhost:5000/booking', {
             method: 'POST',
             headers: {
@@ -63,12 +63,8 @@ const Update = () => {
                 <div class="card-body">
                     <h2 class="card-title">Name: {product.name}</h2>
                     <h2 class="card-title">Price: {product.price}</h2>
+                    <p class="card-title">Stock: {product.Stock}</p>
                     <p>Description: {product.description}</p>
-                    <p>Stock: {product.Stock}</p>
-                    <input type="text" placeholder="Type here" class="input input-bordered input-primary w-full max-w-xs" />
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Oder Now</button>
-                    </div>
                 </div>
             </div>
 
@@ -76,8 +72,24 @@ const Update = () => {
                 <div class="card-body">
                     <h1 className='text-2xl'>Purchase Form</h1>
                     <form onSubmit={handleSubmit} className=''>
-
-
+                    <input type="text" placeholder={user.email}disabled class="input input-bordered input-primary w-full max-w-xs" />
+                    <br/>
+                    <br/>
+                    <input type="text" placeholder={user.displayName} disabled class="input input-bordered input-primary w-full max-w-xs" />
+                    <br/>
+                    <br/>
+                    <input type="text" placeholder="Phone" name="phone" class="input input-bordered input-primary w-full max-w-xs" />
+                    <br/>
+                    <br/>
+                    <input type="text" placeholder="Address" name="address" class="input input-bordered input-primary w-full max-w-xs" />
+                    <br/>
+                    <br/>
+                    <input type="text" placeholder="orderQuantity" name="orderQuantity" class="input input-bordered input-primary w-full max-w-xs" />
+                    <br/>
+                    <br/>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary" type='submit'>Booking Now</button>
+                    </div>
                 
                     </form>
                 </div>

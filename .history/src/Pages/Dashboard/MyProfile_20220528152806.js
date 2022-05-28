@@ -98,7 +98,7 @@ const EditProfile = () => {
                                     value: true,
                                     message: 'number is Required'
                                 }
-                            })} placeholder='+8801923-062919' className="input input-bordered" />
+                            })} placeholder='+8801723635487' className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -109,7 +109,7 @@ const EditProfile = () => {
                                     value: true,
                                     message: 'location is Required'
                                 }
-                            })} name='location' placeholder='Habiganj,Sylhet, Bangladesh' className="input input-bordered" />
+                            })} name='location' placeholder='Dhaka, Bangladesh' className="input input-bordered" />
                         </div>
 
                         <div className="form-control">
@@ -145,7 +145,7 @@ const EditProfile = () => {
                                     value: true,
                                     message: 'LinkedIn is Required'
                                 }
-                            })} name='LinkedIn' placeholder='https://www.linkedin.com/in/shorif-uddin-58b01a203/' className="input input-bordered" />
+                            })} name='LinkedIn' placeholder='' className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">

@@ -7,73 +7,73 @@ import Loading from '../Shared/Loading';
 import { useQuery } from 'react-query';
 
 
-
-const EditProfile = () => {
-    const [user, loading] = useAuthState(auth)
-    const {
-        register,
-        handleSubmit, reset
-    } = useForm();
-
-
-
-    if (loading) {
-        return <Loading />
-    }
+// const EditProfile = () => {
+    // const [user, loading] = useAuthState(auth)
+    // const {
+    //     register,
+    //     handleSubmit, reset
+    // } = useForm();
 
 
 
-    const imageStorageKey = '8c0a9913c88db4043222ef9e72b3c378';
+    // if (loading) {
+    //     return <Loading />
+    // }
 
-    const handleEditProfile = async data => {
-        const image = data.avatar[0];
-        const formData = new FormData();
-        formData.append('image', image);
-        const url = `https://api.imgbb.com/1/upload?key=${ imageStorageKey }`
-        fetch(url, {
-            method: 'POST',
-            body: formData,
-        }).then(res => res.json()).then(result => {
-            if (result.success) {
-                const img = result.data.url;
-                const userProfile = {
-                    name: user?.displayName,
-                    email: user?.email,
-                    phone: data.number,
-                    address: data.location,
-                    bio: data.bio,
-                    education: data.education,
-                    linkedIn: data.LinkedIn,
-                    github: data.github,
-                    avatar: img,
-                }
-                fetch('https://ancient-bastion-87117.herokuapp.com/api/users/profile', {
-                    method: 'PUT',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'authorization': `Bearer ${ localStorage.getItem("accessToken") }`
-                    },
-                    body: JSON.stringify(userProfile),
-                }).then(res => {
-                    if (res.status === 401 || res.status === 403) {
-                        return toast.error('You are not authorized to perform this action');
-                    } else {
-                        return res.json();
+    // const imageStorageKey = '8c0a9913c88db4043222ef9e72b3c378';
 
-                    }
-                }).then(result => { toast.info('Profile Updated'); reset() });
-            }
-        })
+    // const handleEditProfile = async data => {
+    //     const image = data.avatar[0];
+    //     const formData = new FormData();
+    //     formData.append('image', image);
+    //     const url = https://api.imgbb.com/1/upload?key=${ imageStorageKey }
+    //     fetch(url, {
+    //         method: 'POST',
+    //         body: formData,
+    //     }).then(res => res.json()).then(result => {
+    //         if (result.success) {
+    //             const img = result.data.url;
+    //             const userProfile = {
+    //                 name: user?.displayName,
+    //                 email: user?.email,
+    //                 phone: data.number,
+    //                 address: data.location,
+    //                 bio: data.bio,
+    //                 education: data.education,
+    //                 linkedIn: data.LinkedIn,
+    //                 github: data.github,
+    //                 avatar: img,
+    //             }
+    //             fetch('http://localhost:5000/users/profile', {
+    //                 method: 'PUT',
+    //                 headers: {
+    //                     'Content-Type': 'application/json',
+    //                     'authorization': Bearer ${ localStorage.getItem("accessToken") }
+    //                 },
+    //                 body: JSON.stringify(userProfile),
+    //             }).then(res => {
+    //                 if (res.status === 401 || res.status === 403) {
+    //                     return toast.error('You are not authorized to perform this action');
+    //                 } else {
+    //                     return res.json();
 
-
-
-    }
+    //                 }
+    //             }).then(result => { toast.info('Profile Updated'); reset() });
+    //         }
+    //     })
 
 
-    return (
-        <div>
 
-            <div className=" my-14 w-4/5 mx-auto rounded-xl shadow-2xl bg-base-100">
+    // }
+
+const MyProfile = () => {
+
+
+    
+            return (
+        
+                
+            {/*<div className=" my-14 w-4/5 mx-auto rounded-xl shadow-2xl bg-base-100">
                 <h3 className='text-center text-3xl font-bold pt-5'>Update your profile</h3>
                 <form className='flex w-4/5 mx-auto' onSubmit={handleSubmit(handleEditProfile)} >
                     <div className="card-body">
@@ -98,7 +98,7 @@ const EditProfile = () => {
                                     value: true,
                                     message: 'number is Required'
                                 }
-                            })} placeholder='+8801923-062919' className="input input-bordered" />
+                            })} placeholder='+8801723635487' className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -109,7 +109,7 @@ const EditProfile = () => {
                                     value: true,
                                     message: 'location is Required'
                                 }
-                            })} name='location' placeholder='Habiganj,Sylhet, Bangladesh' className="input input-bordered" />
+                            })} name='location' placeholder='Dhaka, Bangladesh' className="input input-bordered" />
                         </div>
 
                         <div className="form-control">
@@ -145,7 +145,7 @@ const EditProfile = () => {
                                     value: true,
                                     message: 'LinkedIn is Required'
                                 }
-                            })} name='LinkedIn' placeholder='https://www.linkedin.com/in/shorif-uddin-58b01a203/' className="input input-bordered" />
+                            })} name='LinkedIn' placeholder='' className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -156,27 +156,12 @@ const EditProfile = () => {
                                     value: true,
                                     message: 'github is Required'
                                 }
-                            })} name='github' placeholder='https://github.com/shorifuddin2' className="input input-bordered" />
+                            })} name='github' placeholder='' className="input input-bordered" />
                         </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Upload Avatar</span>
-                            </label>
-                            <input type="file" {...register('avatar', {
-                                required: {
-                                    value: true,
-                                    message: 'avatar is Required'
-                                }
-                            })} name='avatar' className="input input-bordered py-2" />
-                        </div>
-                        <div className="form-control mt-6">
-                            <button className="btn btn-primary">Update Profile</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
+</div>                       </form> */}
+                        
+        
     );
 };
 
-export default EditProfile;
+export default MyProfile;

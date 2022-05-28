@@ -18,6 +18,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import User from './Pages/Dashboard/User';
+import Booking from './Pages/Dashboard/Booking';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         } /> 
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
           <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
+          <Route path="booking" element={<Booking></Booking>}></Route>
           <Route path="addProduct" element={<AddProduct></AddProduct>}></Route>
           <Route path="addReview" element={<AddReview></AddReview>}></Route>
           <Route path="users" element={<User></User>}></Route>
