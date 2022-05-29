@@ -50,7 +50,7 @@ const Portfolio = () => {
                                     Tories website Provide
                                     <div className="badge badge-secondary">NEW</div>
                                 </h2>
-                                <p>Bootstrap, firebase, netlify, es6, Node Js, Mongodb</p>
+                                <p>Bootstrap, firebase, netlify es6, Node Js, Mongodb</p>
                                 <div className="card-actions justify-end">
                                     <div >
                                         <a href='https://github.com/programming-hero-web-course-4/product-analysis-website-shorifuddin2' target='_blank' className="badge badge-outline">Github Link</a>

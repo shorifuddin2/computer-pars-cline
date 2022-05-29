@@ -2,7 +2,6 @@ import React from 'react';
 import image from '../assets/images/milon-3.png'
 import website from '../assets/images/phone-wb.png'
 import Torius from '../assets/images/Torius.png'
-import Bake from '../assets/images/Bake.png'
 import Facebook from '../assets/icons/facebook.png'
 import Github from '../assets/icons/github.png'
 import Linkedin from '../assets/icons/linkedin.png'
@@ -23,7 +22,7 @@ const Portfolio = () => {
 
                 <div className=' card bg-orange-200 shadow-2xl p-5'>
                     <h1 className='text-primary text-5xl font-bold text-center p-5'>This is My Best website</h1>
-                    <div className='grid grid-cols-3 gap-4 '>
+                    <div className='grid grid-cols-2 gap-4 '>
 
                         <div className="card w-90  bg-base-100 shadow-xl ">
                             <figure><img className='h-80 w-96' src={website} alt="website" /></figure>
@@ -44,25 +43,23 @@ const Portfolio = () => {
                         </div>
 
                         <div className="card w-90 bg-base-100 shadow-xl">
-                            <figure><img className='h-80 w-96' src={Bake} alt="Shoes" /></figure>
+                            <figure><img className='h-80 w-96' src={Torius} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title">
                                     Tories website Provide
                                     <div className="badge badge-secondary">NEW</div>
                                 </h2>
-                                <p>Bootstrap, firebase, netlify, es6, Node Js, Mongodb</p>
+                                <p>Bootstrap, firebase, es6, Node Js, Mongodb</p>
                                 <div className="card-actions justify-end">
                                     <div >
-                                        <a href='https://github.com/programming-hero-web-course-4/product-analysis-website-shorifuddin2' target='_blank' className="badge badge-outline">Github Link</a>
+                                        <a href='https://github.com/programming-hero-web-course-4/independent-service-provider-shorifuddin2' target='_blank' className="badge badge-outline">Github Link</a>
 
-                                        <a href='https://velvety-figolla-d9db1f.netlify.app/
+                                        <a href='https://tourist-man.web.app/
                                     ' target='_blank' className="badge badge-outline">Live website</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-
                         <div className="card w-90 bg-base-100 shadow-xl">
                             <figure><img className='h-80 w-96' src={Torius} alt="Shoes" /></figure>
                             <div className="card-body">

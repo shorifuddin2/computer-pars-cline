@@ -2,7 +2,7 @@ import React from 'react';
 import image from '../assets/images/milon-3.png'
 import website from '../assets/images/phone-wb.png'
 import Torius from '../assets/images/Torius.png'
-import Bake from '../assets/images/Bake.png'
+import Torius from '../assets/images/.png'
 import Facebook from '../assets/icons/facebook.png'
 import Github from '../assets/icons/github.png'
 import Linkedin from '../assets/icons/linkedin.png'
@@ -50,7 +50,7 @@ const Portfolio = () => {
                                     Tories website Provide
                                     <div className="badge badge-secondary">NEW</div>
                                 </h2>
-                                <p>Bootstrap, firebase, netlify, es6, Node Js, Mongodb</p>
+                                <p>Bootstrap, firebase, es6, Node Js, Mongodb</p>
                                 <div className="card-actions justify-end">
                                     <div >
                                         <a href='https://github.com/programming-hero-web-course-4/product-analysis-website-shorifuddin2' target='_blank' className="badge badge-outline">Github Link</a>

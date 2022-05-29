@@ -12,19 +12,17 @@ const Booking = () => {
     
     const [user] = useAuthState(auth);
     const navigate = useNavigate()
-    // console.log(user)
-    const email = user?.email;
-    const { data: booking, refetch,isLoading } = useQuery(['booking',email ], () => {
+    console.log(user)
+    const { data: booking, refetch,isLoading } = useQuery(['booking',user?.email ], () => {
         return fetch(`https://evening-ocean-37550.herokuapp.com/booking/${user?.email}`)
             .then(res => res.json());
             
     })
-    refetch()
     console.log(booking)
         if(isLoading){
             return <Loading></Loading>
         }
-        
+        refetch()
 
     return (
         <div>

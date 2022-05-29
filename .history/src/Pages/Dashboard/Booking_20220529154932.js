@@ -12,15 +12,13 @@ const Booking = () => {
     
     const [user] = useAuthState(auth);
     const navigate = useNavigate()
-    // console.log(user)
-    const email = user?.email;
-    const { data: booking, refetch,isLoading } = useQuery(['booking',email ], () => {
+    
+    const { data: product, refetch,isLoading } = useQuery(['product',user?.email ], () => {
         return fetch(`https://evening-ocean-37550.herokuapp.com/booking/${user?.email}`)
             .then(res => res.json());
             
     })
-    refetch()
-    console.log(booking)
+    console.log(product)
         if(isLoading){
             return <Loading></Loading>
         }
@@ -28,7 +26,7 @@ const Booking = () => {
 
     return (
         <div>
-            <h2>Parches Product: {booking?.length}</h2>
+            <h2>Parches Product: {product?.length}</h2>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>
@@ -40,7 +38,7 @@ const Booking = () => {
                     </thead>
                     <tbody>
                         {
-                            booking?.map((p,index) =><tr>
+                            product?.map((p,index) =><tr>
                                 <th>{index + 1}</th>
                                 <td>{p?.name}</td>
                                 <td>{p?.price}</td>
