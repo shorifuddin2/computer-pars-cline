@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import quote from '../../assets/icons/quote.svg';
 import Review from '../Home/Review';
-const AllReviews = () => {
+const AllReview = () => {
 
     const[reviews,setReviews] = useState([]);
     useEffect(()=>{
-        fetch('https://evening-ocean-37550.herokuapp.com/review')
+        fetch('http://localhost:5000/review')
         .then(res=>res.json())
         .then(data=> setReviews(data));
     },[]);
@@ -20,7 +20,7 @@ const AllReviews = () => {
                     <img src={quote} className="w-24 lg:w-48" alt="" />
                 </div>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+            <div className='grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {
                     reviews.map(review =><Review
                         key={review._id}
@@ -32,4 +32,4 @@ const AllReviews = () => {
     );
 };
 
-export default AllReviews;
+export default AllReview;

@@ -24,6 +24,8 @@ const Booking = () => {
         }
 
 
+
+
     return (
         <div>
             <h2>Parches Product: {product?.length}</h2>
@@ -43,7 +45,9 @@ const Booking = () => {
                                 <td>{p?.name}</td>
                                 <td>{p?.price}</td>
                                 <td>{p?.quantity}</td>
+                                
                             </tr>)
+                           
                         }
                         
                     </tbody>

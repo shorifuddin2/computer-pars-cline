@@ -14,16 +14,6 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_APP_ID,
 };
 
-// const firebaseConfig = {
-//   apiKey: "AIzaSyCwue8hjX1CurQJh8yEP9hpYmnIv0T9nxU",
-//   authDomain: "computer-info-parts.firebaseapp.com",
-//   projectId: "computer-info-parts.firebaseapp.com",
-//   storageBucket: "computer-info-parts.appspot.com",
-//   messagingSenderId: "309211753232",
-//   appId: "1:309211753232:web:2abe7ff2dbc6efd00f9395",
-//   measurementId: "G-16CMZTVBYE"
-// };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 

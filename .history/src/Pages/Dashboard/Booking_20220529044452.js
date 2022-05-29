@@ -45,7 +45,7 @@ const Booking = () => {
                                 <td>{p?.quantity}</td>
                             </tr>)
                         }
-                        
+                        co
                     </tbody>
                 </table>
             </div>

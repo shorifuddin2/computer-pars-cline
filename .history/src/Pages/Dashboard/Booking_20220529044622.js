@@ -43,7 +43,9 @@ const Booking = () => {
                                 <td>{p?.name}</td>
                                 <td>{p?.price}</td>
                                 <td>{p?.quantity}</td>
+                                
                             </tr>)
+                            refetch()
                         }
                         
                     </tbody>

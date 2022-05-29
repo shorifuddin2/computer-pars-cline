@@ -22,7 +22,7 @@ const Booking = () => {
         if(isLoading){
             return <Loading></Loading>
         }
-
+refetch
 
     return (
         <div>
@@ -43,7 +43,9 @@ const Booking = () => {
                                 <td>{p?.name}</td>
                                 <td>{p?.price}</td>
                                 <td>{p?.quantity}</td>
+                                
                             </tr>)
+                           
                         }
                         
                     </tbody>

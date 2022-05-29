@@ -8,21 +8,17 @@ import Loading from '../Shared/Loading'
 
 
 const Booking = () => {
-
-    
     const [user] = useAuthState(auth);
     const navigate = useNavigate()
     
     const { data: product, refetch,isLoading } = useQuery(['product',user?.email ], () => {
-        return fetch(`https://evening-ocean-37550.herokuapp.com/booking/${user?.email}`)
-            .then(res => res.json());
-            
+        return fetch(`https://evening-ocean-37550.herokuapp.com/booking?email=${user?.email}`)
+            .then(res => res.json());        
     })
     console.log(product)
         if(isLoading){
             return <Loading></Loading>
         }
-
 
     return (
         <div>
@@ -31,8 +27,9 @@ const Booking = () => {
                 <table className="table w-full">
                     <thead>
                         <tr>
+                            <th>index</th>
                             <th>Name</th>
-                            <th>price</th>
+                            <th>Price</th>
                             <th>quantity</th>
                         </tr>
                     </thead>
@@ -41,11 +38,10 @@ const Booking = () => {
                             product?.map((p,index) =><tr>
                                 <th>{index + 1}</th>
                                 <td>{p?.name}</td>
-                                <td>{p?.price}</td>
+                                <td>{p?.pzrice}</td>
                                 <td>{p?.quantity}</td>
                             </tr>)
                         }
-                        
                     </tbody>
                 </table>
             </div>
