@@ -4,6 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { NavLink } from 'react-router-dom';
 import auth from '../../firebase.init';
 import computer from '../../assets/images/parts-icon.jpg'
+import Profile from '../../assets/icons/Profile.png'
 
 const Navbar = () => {
 
@@ -22,7 +23,8 @@ const Navbar = () => {
         {
             user && <li><NavLink to="/dashboard">Dashboard</NavLink></li>
         }
-        <li>{user ? <button className="btn btn-ghost ml-28 mr-0 bg-primary" onClick={logout} >Sign Out</button> : <NavLink to="/login">Login</NavLink>}</li>
+        <img className="w-10 mx-5 rounded-full min-w-[40px] h-10 min-h-[40px]" src={user ? user.photoURL : Profile} alt="Profile"/>
+        <li>{user ? <button className="btn btn-ghost mr-0 bg-primary" onClick={logout} >Sign Out</button> : <NavLink to="/login">Login</NavLink>}</li>
     </>
     return (
         <div className="navbar  ">

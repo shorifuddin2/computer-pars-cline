@@ -5,6 +5,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
 import { useQuery } from 'react-query';
+import Profile from '../../assets/icons/Profile.png'
 
 
 
@@ -38,6 +39,7 @@ const EditProfile = () => {
                 const img = result.data.url;
                 const userProfile = {
                     name: user?.displayName,
+                    photoURL: user?.photoURL,
                     email: user?.email,
                     phone: data.number,
                     address: data.location,
@@ -75,6 +77,7 @@ const EditProfile = () => {
 
             <div className=" my-14 w-4/5 mx-auto rounded-xl shadow-2xl bg-base-100">
                 <h3 className='text-center text-3xl font-bold pt-5'>Update your profile</h3>
+                <img className=" w-30 ml-2 rounded-full min-w-[100px] h-30 min-h-[100px] " src={user ? user.photoURL : Profile} alt="Profile"/>
                 <form className='flex w-4/5 mx-auto' onSubmit={handleSubmit(handleEditProfile)} >
                     <div className="card-body">
                         <div className="form-control">

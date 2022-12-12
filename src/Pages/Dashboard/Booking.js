@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import { signOut } from 'firebase/auth';
 import { useQuery } from 'react-query';
 import Loading from '../Shared/Loading'
+
+
 
 
 const Booking = () => {
@@ -15,40 +16,58 @@ const Booking = () => {
     // console.log(user)
     const email = user?.email;
     const { data: booking, refetch,isLoading } = useQuery(['booking',email ], () => {
-        return fetch(`https://evening-ocean-37550.herokuapp.com/booking/${user?.email}`)
+        return fetch(`https://serene-scrubland-85143.herokuapp.com/booking/${user?.email}`)
             .then(res => res.json());
             
     })
+
+
+
+
+const deleteBooking = id =>{ 
+    fetch(`https://serene-scrubland-85143.herokuapp.com/booking/${id}` ,{ method : 'DELETE' , headers: {
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+       }})
+       
+}
     refetch()
-    console.log(booking)
+    // console.log(booking)
         if(isLoading){
             return <Loading></Loading>
         }
         
-
+        
     return (
         <div>
-            <h2>Parches Product: {booking?.length}</h2>
+           
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>
                         <tr>
+                            <th>Photo</th>
                             <th>Name</th>
                             <th>price</th>
-                            <th>quantity</th>
+                            <th>Delete</th>
+                            <th>Payment</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            booking?.map((p,index) =><tr>
-                                <th>{index + 1}</th>
-                                <td>{p?.name}</td>
-                                <td>{p?.price}</td>
-                                <td>{p?.quantity}</td>
+                            booking?.map((product) =><tr>
+                                <td><img className='w-15 h-8' src={product?.image} alt=""/></td>
+                                <td>{product?.name}</td>
+                                <td>${product?.price}</td>
+                                <td><button className='btn btn-xs btn-primary w-15 h-8' onClick={()=>deleteBooking(product._id)}>Delete</button></td>
+
                                 
+                                 <td>
+                                    {(product?.price && !product?.paid) && <Link to={`/dashboard/payment/${product._id}`}><button className='btn btn-xs btn-success'>Pay</button></Link>}
+                                    {(product?.price && product?.paid) && <span className='btn btn-xs btn-success'>Paid</span>}
+                                </td>
                             </tr>)
                             
                         }
+                        
                        
                     </tbody>
                 </table>

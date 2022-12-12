@@ -1,5 +1,6 @@
 
-import React from 'react';import { Button, Form, Placeholder } from 'react-bootstrap';
+import React from 'react';
+
 import { useForm } from 'react-hook-form';
 
 const AddProduct = () => {
@@ -7,7 +8,7 @@ const AddProduct = () => {
   const {register,handleSubmit,} = useForm();
   const onSubmit = (data) =>{
     console.log(data)
-    const url = `https://evening-ocean-37550.herokuapp.com/product`
+    const url = `https://serene-scrubland-85143.herokuapp.com/product`
     fetch(url, {
       method : 'POST',
             headers : {

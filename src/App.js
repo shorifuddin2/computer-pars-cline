@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './Pages/Shared/Navbar';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, } from "react-router-dom";
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/Login/SignUp';
@@ -19,6 +19,8 @@ import MyProfile from './Pages/Dashboard/MyProfile';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import User from './Pages/Dashboard/User';
 import Booking from './Pages/Dashboard/Booking';
+import MakeAdmin from './Pages/Dashboard/MakeAdmin';
+import Payment from './Pages/Dashboard/payment';
 
 function App() {
   return (
@@ -39,9 +41,11 @@ function App() {
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
           <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
           <Route path="booking" element={<Booking></Booking>}></Route>
+          <Route path="payment/:_id" element={<Payment></Payment>}></Route>
           <Route path="addProduct" element={<AddProduct></AddProduct>}></Route>
           <Route path="addReview" element={<AddReview></AddReview>}></Route>
           <Route path="users" element={<User></User>}></Route>
+          <Route path="makeAdmin" element={<MakeAdmin/>}></Route>
           </Route>
         <Route path="blogs" element={<Blogs></Blogs>}></Route>
         <Route path="portfolio" element={<Portfolio />} />

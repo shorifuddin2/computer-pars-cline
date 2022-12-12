@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate, useParams } from 'react-router-dom';
 import auth from '../../firebase.init';
-import useSingleProduct from '../Shared/useSingleProduct'
+
 
 
 
@@ -16,7 +16,7 @@ const Update = () => {
 
 
     useEffect(() => {
-        fetch(`https://evening-ocean-37550.herokuapp.com/products/${id}`)
+        fetch(`https://serene-scrubland-85143.herokuapp.com/products/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [id])
@@ -24,21 +24,22 @@ const Update = () => {
 
 
 
-
-    
+ 
  const handleSubmit = e=>{
     e.preventDefault()
     const items = {
+        image: product?.image,
         email: user?.email,
         userName: user?.displayName,
         productId: product.productId,
         name: product.name,
+        price: product.price,
         phone: e.target.phone.value,
         address: e.target.address.value,
         orderQuantity: e.target.orderQuantity.value
     }
 
-    fetch('https://evening-ocean-37550.herokuapp.com/booking', {
+    fetch('https://serene-scrubland-85143.herokuapp.com/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -48,7 +49,7 @@ const Update = () => {
         )
             .then(res => res.json())
             .then(result => {
-                // navigate('/dashboard/myorder')
+                // navigate('/dashboard/booking')
                 console.log(result);
                 e.target.reset();
                 // toast.success('Order Successfully')
@@ -59,7 +60,7 @@ const Update = () => {
         <div className='flex'>
 
             <div class="card w-96 mx-auto bg-base-100 shadow-xl">
-                <figure><img src={product.image} alt="Image" /></figure>
+                <figure><img src={product.image} alt="" /></figure>
                 <div class="card-body">
                     <h2 class="card-title">Name: {product.name}</h2>
                     <h2 class="card-title">Price: {product.price}</h2>
@@ -72,6 +73,7 @@ const Update = () => {
                 <div class="card-body">
                     <h1 className='text-2xl'>Purchase Form</h1>
                     <form onSubmit={handleSubmit} className=''>
+                    <img className='w-40 h-40 mx-auto' src={product.image} alt=""/>
                     <input type="text" placeholder={user.email}disabled class="input input-bordered input-primary w-full text-red-500 max-w-xs" />
                     <br/>
                     <br/>
