@@ -5,7 +5,7 @@ import Product from '../Home/Product';
 const Parches = () => {
     const[product,setProduct] = useState([]);
     useEffect(()=>{
-        fetch('https://serene-scrubland-85143.herokuapp.com/product')
+        fetch('https://computer-parts-server.onrender.com/product')
         .then(res=>res.json())
         .then(data=> setProduct(data));
     },[]);

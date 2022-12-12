@@ -16,7 +16,7 @@ const Update = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${id}`)
+        fetch(`https://computer-parts-server.onrender.com/products/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [id])
@@ -38,7 +38,7 @@ const Update = () => {
         orderQuantity: e.target.orderQuantity.value
     }
 
-    fetch('http://localhost:5000/booking', {
+    fetch('https://computer-parts-server.onrender.com/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

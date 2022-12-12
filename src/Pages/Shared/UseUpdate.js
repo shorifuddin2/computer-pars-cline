@@ -4,7 +4,7 @@ const UseUpdate = productId =>{
     const [product, setProduct] = useState({});
 
     useEffect( () =>{
-        const url = `https://serene-scrubland-85143.herokuapp.com/product/${productId}`;
+        const url = `https://computer-parts-server.onrender.com/product/${productId}`;
         console.log(url);
         fetch(url)
         .then(res=> res.json())

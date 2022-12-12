@@ -5,7 +5,7 @@ const useSingleProduct = (id) => {
     const[product,setProduct] = useState({});
 
     useEffect(()=>{
-        const url = `https://serene-scrubland-85143.herokuapp.com/product/${id}`;
+        const url = `https://computer-parts-server.onrender.com/product/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setProduct(data))

@@ -15,7 +15,7 @@ const Booking = () => {
     // console.log(user)
     const email = user?.email;
     const { data: booking, refetch,isLoading } = useQuery(['booking',email ], () => {
-        return fetch(`http://localhost:5000/${user?.email}`)
+        return fetch(`https://computer-parts-server.onrender.com/${user?.email}`)
             .then(res => res.json());
             
     })

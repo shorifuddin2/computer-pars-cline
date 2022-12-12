@@ -6,7 +6,7 @@ const UserRow = ({user,index,refetch}) => {
     console.log(user)
     
 const makeAdmin = () =>{
-    fetch(`http://localhost:5000/user/admin/${email}`,{
+    fetch(`https://computer-parts-server.onrender.com/user/admin/${email}`,{
         method: 'PUT',
         headers:{
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

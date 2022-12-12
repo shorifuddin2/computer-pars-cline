@@ -13,7 +13,7 @@ const CheckoutForm = ({ booking }) => {
     const { _id, price, patient, patientName } = booking;
 
     useEffect(() => {
-        fetch('https://serene-scrubland-85143.herokuapp.com/create-payment-intent', {
+        fetch('https://computer-parts-server.onrender.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -80,7 +80,7 @@ const CheckoutForm = ({ booking }) => {
                 booking: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`https://serene-scrubland-85143.herokuapp.com/booking/${_id}`, {
+            fetch(`https://computer-parts-server.onrender.com/booking/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

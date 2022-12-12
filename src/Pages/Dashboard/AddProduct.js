@@ -8,7 +8,7 @@ const AddProduct = () => {
   const {register,handleSubmit,} = useForm();
   const onSubmit = (data) =>{
     console.log(data)
-    const url = `https://serene-scrubland-85143.herokuapp.com/product`
+    const url = `https://computer-parts-server.onrender.com/product`
     fetch(url, {
       method : 'POST',
             headers : {

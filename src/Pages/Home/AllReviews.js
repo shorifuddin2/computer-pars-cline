@@ -5,7 +5,7 @@ const AllReview = () => {
 
     const[reviews,setReviews] = useState([]);
     useEffect(()=>{
-        fetch('https://serene-scrubland-85143.herokuapp.com/review')
+        fetch('https://computer-parts-server.onrender.com/review')
         .then(res=>res.json())
         .then(data=> setReviews(data));
     },[]);

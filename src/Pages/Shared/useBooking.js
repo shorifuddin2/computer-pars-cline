@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 const UseBooking = ()=>{
     const[booking, setBooking] = useState([]);
     useEffect(()=>{
-        fetch('https://serene-scrubland-85143.herokuapp.com/booing')
+        fetch('https://computer-parts-server.onrender.com/booing')
         .then(res=>res.json())
         .then(data=> setBooking(data));
     },[]);

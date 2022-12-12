@@ -11,7 +11,7 @@ const stripePromise = loadStripe('pk_test_51LlR3kCVTQ8yjUgJQGPeeTTuxnZb4AWDihh6Y
 
 const Payment = () => {
     const { id } = useParams();
-    const url = `https://serene-scrubland-85143.herokuapp.com/booking/${id}`;
+    const url = `https://computer-parts-server.onrender.com/booking/${id}`;
 
     const { data: booking, isLoading } = useQuery(['booking', id], () => fetch(url, {
         method: 'GET',

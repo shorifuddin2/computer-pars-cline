@@ -16,7 +16,7 @@ const Booking = () => {
     // console.log(user)
     const email = user?.email;
     const { data: booking, refetch,isLoading } = useQuery(['booking',email ], () => {
-        return fetch(`https://serene-scrubland-85143.herokuapp.com/booking/${user?.email}`)
+        return fetch(`https://computer-parts-server.onrender.com/booking/${user?.email}`)
             .then(res => res.json());
             
     })
@@ -25,7 +25,7 @@ const Booking = () => {
 
 
 const deleteBooking = id =>{ 
-    fetch(`https://serene-scrubland-85143.herokuapp.com/booking/${id}` ,{ method : 'DELETE' , headers: {
+    fetch(`https://computer-parts-server.onrender.com/booking/${id}` ,{ method : 'DELETE' , headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
        }})
        

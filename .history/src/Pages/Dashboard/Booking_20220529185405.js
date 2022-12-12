@@ -14,7 +14,7 @@ const Booking = () => {
     const navigate = useNavigate()
     
     const { data: product, refetch,isLoading } = useQuery(['product',user?.email ], () => {
-        return fetch(`http://localhost:5000/booking/${user?.email}`)
+        return fetch(`https://computer-parts-server.onrender.com/booking/${user?.email}`)
             .then(res => res.json());
             
     })

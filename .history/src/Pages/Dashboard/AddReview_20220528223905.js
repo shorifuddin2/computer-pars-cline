@@ -7,7 +7,7 @@ const AddReview = () => {
   const {register,handleSubmit,} = useForm();
   const onSubmit = (data) =>{
     console.log(data)
-    const url = `http://localhost:5000/review`
+    const url = `https://computer-parts-server.onrender.com/review`
     fetch(url, {
       method : 'POST',
             headers : {
